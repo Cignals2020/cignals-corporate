@@ -165,9 +165,91 @@ const init = async () => {
   if (page === 'contact') mountContact();
   initMotion();
   initFaqAccordion();
+  initTypewriter();
 };
 
 init().catch((error) => {
   console.error(error);
   document.body.insertAdjacentHTML('beforeend', `<p style="padding:24px;color:#eb0034">${escapeHTML(error.message)}</p>`);
 });
+
+/* ===== Typewriter: Home About Section ===== */
+const initTypewriter = () => {
+  const section = document.getElementById('home-about');
+  if (!section) return;
+
+  const paras = section.querySelectorAll('.typewriter-para');
+  if (!paras.length) return;
+
+  // 各段落のテキストをspanに分解
+  paras.forEach((para) => {
+    const raw = para.innerHTML
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>');
+    para.innerHTML = '';
+    [...raw].forEach((ch) => {
+      if (ch === '\n') {
+        para.appendChild(document.createElement('br'));
+      } else {
+        const span = document.createElement('span');
+        span.className = 'typewriter-char';
+        span.textContent = ch;
+        para.appendChild(span);
+      }
+    });
+  });
+
+  // カーソル要素
+  const cursor = document.createElement('span');
+  cursor.className = 'typewriter-cursor';
+
+  let started = false;
+
+  const startTyping = () => {
+    if (started) return;
+    started = true;
+    section.classList.add('typewriter-started');
+
+    const allChars = Array.from(section.querySelectorAll('.typewriter-char'));
+    const BASE_SPEED = 28; // ms/char
+    const PARA_PAUSE = 320; // ms between paragraphs
+
+    let delay = 0;
+    let lastPara = null;
+
+    allChars.forEach((span, i) => {
+      const para = span.closest('.typewriter-para');
+      if (para !== lastPara) {
+        if (lastPara !== null) delay += PARA_PAUSE;
+        lastPara = para;
+      }
+      const d = delay;
+      setTimeout(() => {
+        span.classList.add('visible');
+        // カーソルを現在の文字の後ろに移動
+        span.after(cursor);
+        // 最後の文字のあとカーソルを消す
+        if (i === allChars.length - 1) {
+          setTimeout(() => cursor.remove(), 1800);
+        }
+      }, d);
+      delay += BASE_SPEED + Math.random() * 14;
+    });
+  };
+
+  // IntersectionObserver でビューポートに入ったら開始
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startTyping();
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+  observer.observe(section);
+};
