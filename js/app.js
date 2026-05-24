@@ -118,14 +118,8 @@ const mountContact = () => {
   const form = document.querySelector('#contactForm');
   const thanks = document.querySelector('#formThanks');
   if (!form) return;
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const subject = encodeURIComponent(`Cignalsお問い合わせ：${data.get('type') || ''}`);
-    const body = encodeURIComponent([...data.entries()].map(([k, v]) => `${k}: ${v}`).join('\n'));
-    thanks.hidden = false;
-    window.location.href = `mailto:info@cignals.jp?subject=${subject}&body=${body}`;
-  });
+  // ssgform へ POST するためフォームのデフォルト送信をそのまま使用
+  // （event.preventDefault() / mailto: は使わない）
 };
 
 const initMotion = () => {
