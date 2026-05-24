@@ -1,0 +1,106 @@
+[
+  {
+    "id": "2024-paint-the-city",
+    "title": "Paint The City",
+    "subtitle": "シャッターアート",
+    "year": "2024",
+    "category": "Public Art / Shutter Art",
+    "client": "Paint The City",
+    "location": "Okinawa / Koza",
+    "description": "街のシャッターをキャンバスに変え、日常の風景に新しい表情を生み出すアートプロジェクト。地域の視線が集まる場所に、記憶に残るビジュアル接点を設計しました。",
+    "summary": "街の余白を、文化の入口へ変えるシャッターアート。",
+    "services": [
+      "Art Direction",
+      "Creative Coordination",
+      "Documentation"
+    ],
+    "mainImage": "images/projects/2024-paint-the-city/photos/01-img-8970.jpeg",
+    "gallery": [
+      "images/projects/2024-paint-the-city/photos/01-img-8970.jpeg",
+      "images/projects/2024-paint-the-city/photos/02-img-9665.jpeg",
+      "images/projects/2024-paint-the-city/designs/01-paint-the-city2024.jpg"
+    ],
+    "externalUrl": "",
+    "status": "published",
+    "needsAssets": false
+  },
+  {
+    "id": "2025-palmyra-night-market",
+    "title": "パルミラ夜市",
+    "subtitle": "地域と人が混ざるナイトマーケット",
+    "year": "2025",
+    "category": "Event Produce / Community Design",
+    "client": "Palmyra Night Market",
+    "location": "Okinawa / Koza",
+    "description": "夜の街に人の流れと会話を生み出すローカルマーケット。出店者、来場者、地域の空気をつなぎ、ただの催事ではなく街の記憶に残る体験として編集しました。",
+    "summary": "地域の熱量を夜のマーケットとして立ち上げる。",
+    "services": [
+      "Creative Direction",
+      "Event Planning",
+      "Design",
+      "Community Design"
+    ],
+    "mainImage": "images/projects/2025-palmyra-night-market-2025/designs/01-palmyra-night-market-poster-a3-tt-omote-ol.png",
+    "gallery": [
+      "images/projects/2025-palmyra-night-market-2025/designs/01-palmyra-night-market-poster-a3-tt-omote-ol.png"
+    ],
+    "externalUrl": "",
+    "status": "draft",
+    "needsAssets": false
+  },
+  {
+    "id": "2025-kozarocks",
+    "title": "KOZAROCKS",
+    "subtitle": "コザの街を巻き込む音楽・カルチャープロジェクト",
+    "year": "2025",
+    "category": "Festival / Branding / Produce",
+    "client": "KOZAROCKS",
+    "location": "Okinawa / Koza",
+    "description": "企画、デザイン、SNSクリエイティブ、現場ディレクションまで横断し、コザの熱量を可視化したプロジェクト。街・音楽・人をつなぐ導線を設計しました。",
+    "summary": "コザの熱量を、音楽と街の体験として届ける。",
+    "services": [
+      "Creative Direction",
+      "Project Design",
+      "Event Planning",
+      "Branding",
+      "SNS Creative",
+      "Film Production"
+    ],
+    "mainImage": "images/projects/2025-kozarocks-2025/photos/01-dsc-6317.jpg",
+    "gallery": [
+      "images/projects/2025-kozarocks-2025/photos/01-dsc-6317.jpg",
+      "images/projects/2025-kozarocks-2025/photos/02-img-2414.jpg",
+      "images/projects/2025-kozarocks-2025/photos/03-pxl-20250712-025254525-mp.jpg",
+      "images/projects/2025-kozarocks-2025/photos/04-pxl-20250712-101344908-mp.jpg",
+      "images/projects/2025-kozarocks-2025/designs/01-04-banar-rgb.png"
+    ],
+    "externalUrl": "",
+    "status": "published",
+    "needsAssets": false
+  },
+  {
+    "id": "2026-workprooffice-renewal",
+    "title": "workprooffice サイトリニューアル",
+    "subtitle": "法人向けWebリニューアル",
+    "year": "2026",
+    "category": "Web Renewal / Corporate Site",
+    "client": "workprooffice",
+    "location": "Online",
+    "description": "法人向けサービスの信頼感と問い合わせ導線を整理するWebリニューアル案件。事業内容の伝わりやすさ、CVポイント、保守しやすい情報設計を重視した仮実績として掲載しています。",
+    "summary": "信頼感とCV導線を整える、法人サイトの再設計。",
+    "services": [
+      "Web Direction",
+      "Information Architecture",
+      "UI Design",
+      "Frontend"
+    ],
+    "mainImage": "images/projects/workprooffice-site.png",
+    "gallery": [
+      "images/projects/workprooffice-site.png"
+    ],
+    "externalUrl": "https://workpro-office.com/",
+    "status": "draft",
+    "needsAssets": true,
+    "comingSoon": true
+  }
+]

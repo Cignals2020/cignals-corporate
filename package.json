@@ -1,0 +1,14 @@
+{
+  "name": "cignals-portfolio-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio site for Cignals with data-managed Projects, Journal and Behind sections.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "preview": "vite --host 0.0.0.0",
+    "check:data": "node -e \"JSON.parse(require('fs').readFileSync('data/projects.json')); JSON.parse(require('fs').readFileSync('data/journal.json')); JSON.parse(require('fs').readFileSync('data/behind.json')); console.log('JSON OK')\""
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
