@@ -160,6 +160,7 @@ const init = async () => {
   initMotion();
   initFaqAccordion();
   initTypewriter();
+  initHamburger();
 };
 
 init().catch((error) => {
@@ -246,4 +247,35 @@ const initTypewriter = () => {
     { threshold: 0.25 }
   );
   observer.observe(section);
+};
+
+/* ===== Hamburger Menu ===== */
+const initHamburger = () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('#primaryNav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+  });
+
+  // ナビリンクをタップしたらメニューを閉じる
+  nav.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+    });
+  });
+
+  // メニュー外タップで閉じる
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+    }
+  });
 };

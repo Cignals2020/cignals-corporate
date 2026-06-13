@@ -14,7 +14,7 @@
 <body data-page="contact">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Cignals Home"><img src="images/brand/Cignals-logo.webp" alt="Cignals"></a>
-    <nav class="nav" aria-label="Primary navigation">
+    <nav class="nav" id="primaryNav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -22,6 +22,9 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
   </header>
   <main>
     <section class="page-hero">
@@ -41,7 +44,7 @@
           <span>その他のご相談・取材・提携</span>
         </div>
       </aside>
-      <form id="contactForm" class="contact-form" action="https://ssgform.com/s/4OW1YcVpF4Nj" method="POST">
+      <form id="contactForm" class="contact-form">
         <h2>お問い合わせフォーム</h2>
         <p>通常2営業日以内にご返信いたします。</p>
         <label>会社名・団体名 <span>*</span><input name="company" type="text" required placeholder="株式会社○○"></label>
