@@ -75,7 +75,13 @@ const journalArticle = (j) => {
   </article>`;
 };
 
-const serviceDetail = (s) => `
+const serviceDetail = (s) => {
+  // 💡 id が 'training-retreat' (または設定したid) の場合だけ、専用LPへのボタンにする
+  const isCamp = s.id === 'training-retreat';
+  const btnHref = isCamp ? 'services/camp/index.html' : 'contact.html';
+  const btnText = isCamp ? '研修について詳しく見る（専用LP）' : 'この内容で相談する';
+
+  return `
   <article class="service-detail reveal-item" id="${escapeHTML(s.id)}">
     <div class="service-visual">${media(s.image, s.title)}</div>
     <div class="service-detail-body">
@@ -86,9 +92,10 @@ const serviceDetail = (s) => `
       <h3>こんな企業・行政へ</h3>
       <ul>${(s.targets || []).map(t => `<li>${escapeHTML(t)}</li>`).join('')}</ul>
       <p class="notice">${escapeHTML(s.price)}</p>
-      <a class="button arrow-button" href="contact.html">この内容で相談する <span aria-hidden="true">→</span></a>
+      <a class="button arrow-button" href="${btnHref}">${btnText} <span aria-hidden="true">→</span></a>
     </div>
   </article>`;
+};
 
 const mountHome = async () => {
   const [projects, journal, services] = await Promise.all([fetchJSON('data/projects.json'), fetchJSON('data/journal.json'), fetchJSON('data/services.json')]);
