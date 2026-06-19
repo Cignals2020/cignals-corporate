@@ -78,7 +78,7 @@ const journalArticle = (j) => {
 const serviceDetail = (s) => {
   // 💡 id が 'training-retreat' (または設定したid) の場合だけ、専用LPへのボタンにする
   const isCamp = s.id === 'training-retreat';
-  const btnHref = isCamp ? '/services/camp/' : 'contact.html';
+  const btnHref = isCamp ? '/camp' : 'contact.html';
   const btnText = isCamp ? '研修について詳しく見る（専用LP）' : 'この内容で相談する';
 
   return `

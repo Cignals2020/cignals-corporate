@@ -1,0 +1,459 @@
+/* ===================================================
+   Cignals — エグゼクティブ開発合宿 LP
+   services/camp/css/camp.css
+   完全独立型（外部CSSへの依存なし）
+   =================================================== */
+
+/* ---- リセット & ベース ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #0a0808;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* ---- カラー変数 ---- */
+:root {
+  --red:    #eb0034;
+  --red-dk: #c4002b;
+  --ink:    #0a0808;
+  --paper:  #f5f3ef;
+  --line:   rgba(34,23,22,.12);
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px,4vw,52px);
+  height: 64px;
+  background: rgba(10,8,8,.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.brand img { height: 28px; width: auto; }
+.nav { display: flex; gap: clamp(16px,2vw,32px); }
+.nav a {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.75);
+  transition: color .2s;
+}
+.nav a:hover { color: #fff; }
+
+/* ハンバーガー */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .25s cubic-bezier(.23,1,.32,1), opacity .2s;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+  .nav-toggle { display: flex; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10,8,8,.97);
+    padding: 12px 0 20px;
+  }
+  .nav.open { display: flex; }
+  .nav a {
+    padding: 14px clamp(20px,4vw,52px);
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+}
+
+/* ===== HERO ===== */
+.camp-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--ink);
+}
+.camp-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.camp-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: .42;
+}
+.camp-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(100px,14vw,180px) clamp(20px,4vw,60px) clamp(60px,8vw,120px);
+  width: 100%;
+}
+.camp-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 5px 14px;
+  border-radius: 40px;
+  margin-bottom: clamp(20px,3vw,36px);
+}
+.camp-hero-h1 {
+  font-size: clamp(34px,7vw,96px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.05em;
+  color: #fff;
+  margin: 0 0 clamp(20px,3vw,36px);
+}
+.camp-hero-sub {
+  font-size: clamp(15px,1.6vw,20px);
+  line-height: 1.9;
+  color: rgba(255,255,255,.78);
+  margin: 0 0 clamp(28px,4vw,52px);
+  max-width: 680px;
+}
+
+/* ===== CTAボタン ===== */
+.camp-cta-btn {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: clamp(14px,1.4vw,17px);
+  font-weight: 900;
+  letter-spacing: .04em;
+  padding: 18px 40px;
+  border-radius: 6px;
+  transition: background .2s ease, transform .15s ease;
+}
+.camp-cta-btn:hover { background: var(--red-dk); transform: translateY(-2px); }
+.camp-cta-btn:active { transform: scale(.97); }
+.camp-cta-btn-lg {
+  font-size: clamp(16px,1.8vw,20px);
+  padding: 22px 52px;
+}
+
+/* ===== セクション共通 ===== */
+.camp-section { padding: clamp(72px,10vw,140px) 0; }
+.camp-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 clamp(20px,4vw,60px);
+}
+.camp-eyebrow {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 18px;
+}
+.camp-section h2 {
+  font-size: clamp(26px,4vw,52px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -.05em;
+  margin: 0 0 clamp(28px,4vw,52px);
+}
+
+/* ===== PROBLEM ===== */
+.camp-problem { background: var(--ink); }
+.camp-problem h2 { color: #fff; }
+.camp-checklist {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+  margin: 0 0 clamp(24px,3vw,40px);
+}
+.camp-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: clamp(15px,1.5vw,18px);
+  line-height: 1.75;
+  color: rgba(255,255,255,.82);
+  padding: 18px 24px;
+  background: rgba(255,255,255,.06);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+}
+.camp-checklist li::before {
+  content: "☑";
+  color: var(--red);
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.camp-problem-close {
+  font-size: clamp(16px,1.6vw,20px);
+  color: rgba(255,255,255,.9);
+  line-height: 1.8;
+}
+.camp-problem-close strong { color: #fff; }
+
+/* ===== OFFER ===== */
+.camp-offer { background: var(--paper); }
+.camp-offer-lead {
+  font-size: clamp(16px,1.5vw,19px);
+  color: #555;
+  margin: -24px 0 clamp(28px,4vw,52px);
+}
+.camp-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: clamp(16px,2.5vw,32px);
+}
+.camp-offer-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: clamp(28px,4vw,52px);
+  box-shadow: 0 8px 40px rgba(34,23,22,.06);
+  transition: transform .25s cubic-bezier(.23,1,.32,1), box-shadow .25s cubic-bezier(.23,1,.32,1);
+}
+.camp-offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(34,23,22,.12);
+}
+.camp-offer-num {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+.camp-offer-card h3 {
+  font-size: clamp(20px,2.2vw,28px);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -.04em;
+  margin: 0 0 16px;
+}
+.camp-offer-card p {
+  font-size: clamp(14px,1.3vw,16px);
+  line-height: 1.85;
+  color: #555;
+}
+
+/* ===== CASES ===== */
+.camp-cases { background: #fff; }
+.camp-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: clamp(16px,2.5vw,32px);
+}
+.camp-case-card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--paper);
+  transition: transform .25s cubic-bezier(.23,1,.32,1);
+}
+.camp-case-card:hover { transform: translateY(-4px); }
+.camp-case-img {
+  height: clamp(220px,28vw,380px);
+  overflow: hidden;
+}
+.camp-case-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.23,1,.32,1);
+}
+.camp-case-card:hover .camp-case-img img { transform: scale(1.04); }
+.camp-case-body { padding: clamp(20px,3vw,36px); }
+.camp-case-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 10px;
+}
+.camp-case-body h3 {
+  font-size: clamp(20px,2.2vw,26px);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.camp-case-body h3 span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #888;
+  text-transform: uppercase;
+}
+.camp-case-body p {
+  font-size: clamp(14px,1.3vw,15px);
+  line-height: 1.85;
+  color: #555;
+}
+
+/* ===== PRICING ===== */
+.camp-pricing { background: var(--ink); }
+.camp-pricing h2 { color: #fff; }
+.camp-pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px,2.5vw,32px);
+  align-items: start;
+}
+.camp-price-card {
+  border-radius: 24px;
+  padding: clamp(28px,4vw,52px);
+}
+.camp-price-main { background: var(--red); color: #fff; }
+.camp-price-option {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+}
+.camp-price-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  opacity: .75;
+  margin: 0 0 12px;
+}
+.camp-price-card h3 {
+  font-size: clamp(18px,2vw,24px);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+.camp-price-amount {
+  font-size: clamp(36px,5vw,64px);
+  font-weight: 900;
+  letter-spacing: -.06em;
+  line-height: 1;
+  margin: 0 0 24px;
+}
+.camp-price-amount span { font-size: .35em; font-weight: 700; opacity: .8; }
+.camp-price-includes {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.camp-price-includes li {
+  font-size: clamp(13px,1.2vw,15px);
+  line-height: 1.7;
+  padding-left: 18px;
+  position: relative;
+  opacity: .9;
+}
+.camp-price-includes li::before { content: "—"; position: absolute; left: 0; opacity: .6; }
+.camp-price-option-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 0 0 20px;
+}
+.camp-price-option-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: clamp(13px,1.2vw,15px);
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.camp-price-option-list li:last-child { border-bottom: none; }
+.camp-price-item { line-height: 1.6; opacity: .85; }
+.camp-price-val {
+  font-weight: 900;
+  font-size: clamp(16px,1.6vw,20px);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.camp-price-note { font-size: 12px; opacity: .6; line-height: 1.7; }
+
+/* ===== CTA SECTION ===== */
+.camp-cta-section {
+  background: var(--paper);
+  padding: clamp(80px,11vw,160px) 0;
+  text-align: center;
+}
+.camp-cta-section h2 {
+  font-size: clamp(24px,3.5vw,48px);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -.05em;
+  margin: 0 0 clamp(24px,3vw,40px);
+}
+.camp-cta-note { margin: 20px 0 0; font-size: 14px; color: #888; }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--ink);
+  color: rgba(255,255,255,.55);
+  font-size: 13px;
+  line-height: 1.9;
+  padding: clamp(40px,6vw,72px) clamp(20px,4vw,60px);
+  display: flex;
+  gap: clamp(24px,4vw,60px);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer strong { color: rgba(255,255,255,.9); font-weight: 900; letter-spacing: .06em; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .camp-offer-grid,
+  .camp-cases-grid,
+  .camp-pricing-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .camp-hero-h1 { letter-spacing: -.03em; }
+  .camp-price-option-list li { flex-direction: column; gap: 4px; }
+}
+
+/* ===== アニメーション ===== */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .6s cubic-bezier(.23,1,.32,1), transform .6s cubic-bezier(.23,1,.32,1);
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+}
