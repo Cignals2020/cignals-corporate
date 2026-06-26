@@ -1,6 +1,6 @@
 /* ===================================================
    Cignals — エグゼクティブ開発合宿 LP
-   services/camp/css/camp.css
+   css/camp.css
    完全独立型（外部CSSへの依存なし）
    =================================================== */
 
@@ -167,6 +167,32 @@ a { color: inherit; text-decoration: none; }
 .camp-cta-btn-lg {
   font-size: clamp(16px,1.8vw,20px);
   padding: 22px 52px;
+}
+
+/* アウトラインボタン（個人向けCTA） */
+.camp-cta-btn-outline {
+  background: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+.camp-cta-btn-outline:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* セカンダリボタン（CTAセクション下段） */
+.camp-cta-btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font-size: clamp(14px,1.4vw,17px);
+  padding: 18px 40px;
+}
+.camp-cta-btn-secondary:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* ===== セクション共通 ===== */
@@ -408,6 +434,102 @@ a { color: inherit; text-decoration: none; }
 }
 .camp-price-note { font-size: 12px; opacity: .6; line-height: 1.7; }
 
+/* ===== INDIVIDUAL RESIDENCE ===== */
+.camp-individual { background: var(--paper); }
+.camp-individual h2 { margin-bottom: clamp(20px,3vw,36px); }
+
+.camp-individual-body {
+  max-width: 720px;
+  margin: 0 0 clamp(36px,5vw,64px);
+}
+.camp-individual-lead {
+  font-size: clamp(16px,1.6vw,20px);
+  line-height: 2;
+  color: #333;
+  margin: 0 0 clamp(24px,3vw,40px);
+}
+.camp-individual-lead strong { color: var(--ink); }
+
+.camp-individual-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 0 0 clamp(24px,3vw,40px);
+}
+.camp-individual-list li {
+  font-size: clamp(15px,1.5vw,18px);
+  line-height: 1.75;
+  color: #333;
+  padding: 14px 20px;
+  background: #fff;
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+}
+.camp-individual-list li::before {
+  content: "— ";
+  color: var(--red);
+  font-weight: 900;
+}
+
+.camp-individual-close {
+  font-size: clamp(16px,1.6vw,20px);
+  line-height: 1.9;
+  color: #333;
+}
+.camp-individual-close strong { color: var(--ink); }
+
+/* こんな方へ */
+.camp-individual-target {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: clamp(24px,3.5vw,44px);
+  max-width: 560px;
+  margin: 0 0 clamp(36px,5vw,56px);
+}
+.camp-individual-target-title {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 18px;
+}
+.camp-target-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.camp-target-list li {
+  font-size: clamp(14px,1.4vw,17px);
+  line-height: 1.7;
+  color: #333;
+  padding-left: 24px;
+  position: relative;
+}
+.camp-target-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 900;
+}
+
+/* 個人向けCTAエリア */
+.camp-individual-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.camp-individual-cta-label {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #888;
+}
+
 /* ===== CTA SECTION ===== */
 .camp-cta-section {
   background: var(--paper);
@@ -421,7 +543,29 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -.05em;
   margin: 0 0 clamp(24px,3vw,40px);
 }
-.camp-cta-note { margin: 20px 0 0; font-size: 14px; color: #888; }
+
+/* 区切り */
+.camp-cta-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: clamp(28px,4vw,48px) 0;
+  color: #aaa;
+}
+.camp-cta-divider span {
+  font-size: 18px;
+  letter-spacing: .1em;
+  color: #ccc;
+}
+.camp-cta-divider p {
+  font-size: clamp(13px,1.2vw,15px);
+  color: #888;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.camp-cta-note { margin: 28px 0 0; font-size: 14px; color: #888; }
 
 /* ===== FOOTER ===== */
 .footer {
@@ -446,6 +590,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 620px) {
   .camp-hero-h1 { letter-spacing: -.03em; }
   .camp-price-option-list li { flex-direction: column; gap: 4px; }
+  .camp-individual-cta { flex-direction: column; align-items: flex-start; }
 }
 
 /* ===== アニメーション ===== */
