@@ -189,11 +189,6 @@ const init = async () => {
   initReservationTracking();
 };
 
-init().catch((error) => {
-  console.error(error);
-  document.body.insertAdjacentHTML('beforeend', `<p style="padding:24px;color:#eb0034">${escapeHTML(error.message)}</p>`);
-});
-
 /* ===== Typewriter: Home About Section ===== */
 const initTypewriter = () => {
   const section = document.getElementById('home-about');
@@ -305,3 +300,8 @@ const initHamburger = () => {
     }
   });
 };
+
+init().catch((error) => {
+  console.error(error);
+  document.body.insertAdjacentHTML('beforeend', `<p style="padding:24px;color:#eb0034">${escapeHTML(error.message)}</p>`);
+});
