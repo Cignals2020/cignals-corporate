@@ -78,7 +78,7 @@ const journalArticle = (j) => {
 const serviceDetail = (s) => {
   // 専用LPを持つサービスは、それぞれのLPへ誘導する
   const LP_MAP = {
-    'training-retreat': { href: 'services.html', text: 'この内容で相談する' },
+    'training-retreat': { href: 'camp.html', text: 'この内容で相談する' },
     'produce': { href: 'produce.html', text: 'プロデュース契約を詳しく見る' }
   };
   const lp = LP_MAP[s.id];
