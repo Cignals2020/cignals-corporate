@@ -10,6 +10,14 @@
   <meta property="og:type" content="website">
   <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ER5N1Q1LG8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ER5N1Q1LG8');
+  </script>
 </head>
 <body data-page="home">
   <header class="site-header">
@@ -83,6 +91,16 @@
       <div id="journalGrid" class="cards cards-compact" data-limit="1"></div>
     </section>
 
+    <!-- Produce (主力商品への導線) -->
+    <section class="section home-produce">
+      <div class="home-produce-inner reveal-item">
+        <p class="eyebrow">Regional Project Produce</p>
+        <h2>その挑戦に、<br>最後まで伴走する。</h2>
+        <p>Cignalsの中心にあるのは、地域プロジェクトのプロデュース。イベントもデザインも映像も、すべては成功のための手段です。構想段階から月額で伴走し、成果物ではなく成果をお届けします。</p>
+        <a class="button arrow-button" href="produce.html">プロデュース契約について <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
     <!-- Services -->
     <section class="section service-section">
       <div class="section-head">
@@ -98,7 +116,10 @@
       <p class="eyebrow">Contact</p>
       <h2>「前例がない」から、面白い。</h2>
       <p>漠然とした想いだけで十分です。まずは話を聞かせてください。企画段階のご相談、大歓迎です。</p>
-      <a class="button button-dark" href="contact.html">無料相談・お問い合わせ →</a>
+      <div class="home-cta-actions">
+        <a class="button button-dark arrow-button" href="https://timerex.net/s/toyosato_2372_3716/b30cccff" target="_blank" rel="noopener">30分の無料相談を予約 <span aria-hidden="true">→</span></a>
+        <a class="text-link home-cta-mail" href="contact.html">フォームから問い合わせる</a>
+      </div>
     </section>
 
   </main>

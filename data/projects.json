@@ -94,13 +94,10 @@
       "UI Design",
       "Frontend"
     ],
-    "mainImage": "images/projects/workprooffice-site.png",
-    "gallery": [
-      "images/projects/workprooffice-site.png"
-    ],
+    "mainImage": "",
+    "gallery": [],
     "externalUrl": "https://workpro-office.com/",
     "status": "draft",
-    "needsAssets": true,
-    "comingSoon": true
+    "needsAssets": true
   }
 ]
