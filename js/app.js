@@ -78,7 +78,7 @@ const journalArticle = (j) => {
 const serviceDetail = (s) => {
   // 専用LPを持つサービスは、それぞれのLPへ誘導する
   const LP_MAP = {
-    'training-retreat': { href: 'camp.html', text: 'この内容で相談する' },
+    'training-retreat': { href: 'https://cignals.jp/camp', text: '研修について詳しく見る' },
     'produce': { href: 'produce.html', text: 'プロデュース契約を詳しく見る' }
   };
   const lp = LP_MAP[s.id];
@@ -138,20 +138,45 @@ const initMotion = () => {
     el.classList.add('motion-card');
   });
 
-  const revealTargets = document.querySelectorAll('.section, .page-hero, .hero, .cta, .motion-card, .reveal-item');
+  const revealTargets = Array.from(document.querySelectorAll('.section, .page-hero, .hero, .cta, .motion-card, .reveal-item'));
   if (!('IntersectionObserver' in window)) {
     revealTargets.forEach((el) => el.classList.add('is-visible'));
     return;
   }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting || entry.intersectionRatio > 0) {
         entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, {
+    // 画面より縦長の要素（サービス一覧セクション等）でも必ず発火するよう
+    // threshold は 0 を含める。0.12 だと画面高を超える要素は永久に条件を満たさない。
+    rootMargin: '0px 0px -5% 0px',
+    threshold: 0
+  });
   revealTargets.forEach((el) => observer.observe(el));
+
+  // フォールバック：Observerが取りこぼした要素を、画面に重なった時点で強制表示
+  const failsafe = () => {
+    const vh = window.innerHeight;
+    revealTargets.forEach((el) => {
+      if (el.classList.contains('is-visible')) return;
+      const r = el.getBoundingClientRect();
+      // 画面と少しでも重なっていれば表示（縦長要素にも対応）
+      if (r.top < vh && r.bottom > 0) {
+        el.classList.add('is-visible');
+        observer.unobserve(el);
+      }
+    });
+  };
+  window.addEventListener('scroll', failsafe, { passive: true });
+  window.addEventListener('resize', failsafe, { passive: true });
+  window.addEventListener('load', failsafe);
+  failsafe();
+  setTimeout(failsafe, 300);
 };
 
 const initFaqAccordion = () => {
@@ -188,6 +213,11 @@ const init = async () => {
   initHamburger();
   initReservationTracking();
 };
+
+init().catch((error) => {
+  console.error(error);
+  document.body.insertAdjacentHTML('beforeend', `<p style="padding:24px;color:#eb0034">${escapeHTML(error.message)}</p>`);
+});
 
 /* ===== Typewriter: Home About Section ===== */
 const initTypewriter = () => {
@@ -300,8 +330,3 @@ const initHamburger = () => {
     }
   });
 };
-
-init().catch((error) => {
-  console.error(error);
-  document.body.insertAdjacentHTML('beforeend', `<p style="padding:24px;color:#eb0034">${escapeHTML(error.message)}</p>`);
-});
