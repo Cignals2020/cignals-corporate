@@ -1,103 +1,337 @@
 [
   {
-    "id": "2024-paint-the-city",
-    "title": "Paint The City",
-    "subtitle": "シャッターアート",
-    "year": "2024",
-    "category": "Public Art / Shutter Art",
-    "client": "Paint The City",
-    "location": "Okinawa / Koza",
-    "description": "街のシャッターをキャンバスに変え、日常の風景に新しい表情を生み出すアートプロジェクト。地域の視線が集まる場所に、記憶に残るビジュアル接点を設計しました。",
-    "summary": "街の余白を、文化の入口へ変えるシャッターアート。",
-    "services": [
-      "Art Direction",
-      "Creative Coordination",
-      "Documentation"
-    ],
-    "mainImage": "images/projects/2024-paint-the-city/photos/01-img-8970.jpeg",
-    "gallery": [
-      "images/projects/2024-paint-the-city/photos/01-img-8970.jpeg",
-      "images/projects/2024-paint-the-city/photos/02-img-9665.jpeg",
-      "images/projects/2024-paint-the-city/designs/01-paint-the-city2024.jpg"
-    ],
-    "externalUrl": "",
-    "status": "published",
-    "needsAssets": false
-  },
-  {
-    "id": "2025-palmyra-night-market",
-    "title": "パルミラ夜市",
-    "subtitle": "地域と人が混ざるナイトマーケット",
-    "year": "2025",
-    "category": "Event Produce / Community Design",
-    "client": "Palmyra Night Market",
-    "location": "Okinawa / Koza",
-    "description": "夜の街に人の流れと会話を生み出すローカルマーケット。出店者、来場者、地域の空気をつなぎ、ただの催事ではなく街の記憶に残る体験として編集しました。",
-    "summary": "地域の熱量を夜のマーケットとして立ち上げる。",
-    "services": [
-      "Creative Direction",
-      "Event Planning",
-      "Design",
-      "Community Design"
-    ],
-    "mainImage": "images/projects/2025-palmyra-night-market-2025/designs/01-palmyra-night-market-poster-a3-tt-omote-ol.png",
-    "gallery": [
-      "images/projects/2025-palmyra-night-market-2025/designs/01-palmyra-night-market-poster-a3-tt-omote-ol.png"
-    ],
-    "externalUrl": "",
-    "status": "draft",
-    "needsAssets": false
-  },
-  {
-    "id": "2025-kozarocks",
+    "id": "kozarocks",
     "title": "KOZAROCKS",
-    "subtitle": "コザの街を巻き込む音楽・カルチャープロジェクト",
-    "year": "2025",
-    "category": "Festival / Branding / Produce",
+    "subtitle": "コザ発のスタートアップカンファレンス＆フェスティバル",
+    "type": "client",
+    "featured": true,
+    "year": "2024–2026",
     "client": "KOZAROCKS",
-    "location": "Okinawa / Koza",
-    "description": "企画、デザイン、SNSクリエイティブ、現場ディレクションまで横断し、コザの熱量を可視化したプロジェクト。街・音楽・人をつなぐ導線を設計しました。",
-    "summary": "コザの熱量を、音楽と街の体験として届ける。",
-    "services": [
-      "Creative Direction",
-      "Project Design",
-      "Event Planning",
-      "Branding",
-      "SNS Creative",
-      "Film Production"
-    ],
-    "mainImage": "images/projects/2025-kozarocks-2025/photos/01-dsc-6317.jpg",
+    "location": "沖縄市コザ（Koza Startup Arcade ほか）",
+    "summary": "毎年のテーマを、キービジュアルから会場装飾・グッズ・映像まで一貫したクリエイティブで形に。",
+    "roles": ["企画", "制作", "運営"],
+    "areas": ["クリエイティブ制作", "イベント・体験づくり"],
+    "background": "「スタートアップ×万国津梁×音楽・ロック」をテーマに、沖縄の成長産業とスタートアップ、カルチャーを掛け合わせるカンファレンス＆フェスティバル。商店街やライブハウスなど街全体を会場にするため、来場者が迷わず、街ごと楽しめる体験の設計が求められていました。",
+    "approach": "毎年のテーマを一枚のキービジュアルに落とし込み、そこからポスター、のぼり、懸垂幕、フロアサイン、スタッフTシャツ、グッズ、映像までトーンを揃えて展開。2026年のテーマ「文創開化」では、沖縄の伝統的なモチーフとネオンの色彩を掛け合わせ、「活かして創る」世界観を表現しました。",
+    "deliverables": ["キービジュアル・ロゴ展開", "ポスター・チラシ・Webバナー", "のぼり・懸垂幕・フロアサインなどの会場装飾", "スタッフTシャツ・手提げ袋・ステッカー・ボトル", "オープニング／ダイジェスト映像", "SNSクリエイティブ"],
+    "result": "2025年は2日間で延べ約5,000名（有料エリアは延べ2,000名）が参加し、有料エリア参加者の約57%が県外・海外から。2026年は7月10日・11日に開催しました。",
+    "mainImage": "images/works/kozarocks/kozarocks-2026-venue.jpg",
     "gallery": [
-      "images/projects/2025-kozarocks-2025/photos/01-dsc-6317.jpg",
-      "images/projects/2025-kozarocks-2025/photos/02-img-2414.jpg",
-      "images/projects/2025-kozarocks-2025/photos/03-pxl-20250712-025254525-mp.jpg",
-      "images/projects/2025-kozarocks-2025/photos/04-pxl-20250712-101344908-mp.jpg",
-      "images/projects/2025-kozarocks-2025/designs/01-04-banar-rgb.png"
+      "images/works/kozarocks/kozarocks-2026-kv.jpg",
+      "images/works/kozarocks/kozarocks-2025-01.jpg",
+      "images/works/kozarocks/kozarocks-2026-sticker.jpg",
+      "images/works/kozarocks/kozarocks-2026-bottle.jpg",
+      "images/works/kozarocks/kozarocks-2026-session.jpg",
+      "images/works/kozarocks/kozarocks-2026-group.jpg",
+      "images/works/kozarocks/kozarocks-2024-kv.jpg",
+      "images/works/kozarocks/kozarocks-2024-dj.jpg"
     ],
-    "externalUrl": "",
+    "links": [
+      { "label": "オープニングムービー", "url": "https://youtu.be/JN0YfhOazFg" },
+      { "label": "ダイジェストムービー", "url": "https://www.youtube.com/watch?v=P195OB0dJJc" }
+    ],
+    "credits": {},
+    "contactType": "event",
     "status": "published",
-    "needsAssets": false
+    "memo": "2026年のダイジェスト動画をYouTube等に公開したら links に追加する"
   },
   {
-    "id": "2026-workprooffice-renewal",
-    "title": "workprooffice サイトリニューアル",
-    "subtitle": "法人向けWebリニューアル",
-    "year": "2026",
-    "category": "Web Renewal / Corporate Site",
-    "client": "workprooffice",
-    "location": "Online",
-    "description": "法人向けサービスの信頼感と問い合わせ導線を整理するWebリニューアル案件。事業内容の伝わりやすさ、CVポイント、保守しやすい情報設計を重視した仮実績として掲載しています。",
-    "summary": "信頼感とCV導線を整える、法人サイトの再設計。",
-    "services": [
-      "Web Direction",
-      "Information Architecture",
-      "UI Design",
-      "Frontend"
+    "id": "palmyra-night-market",
+    "title": "パルミラ夜市",
+    "subtitle": "台湾夜市と沖縄チャンプルー文化が交差する、商店街の夜市",
+    "type": "client",
+    "featured": true,
+    "year": "2025–2026",
+    "client": "沖縄市コザパルミラ通り会",
+    "location": "沖縄市・パルミラ通り",
+    "summary": "ネオンと提灯が灯る夜の世界観を、キービジュアルから公式サイトまで一貫制作。",
+    "roles": ["企画", "制作"],
+    "areas": ["クリエイティブ制作", "イベント・体験づくり"],
+    "background": "商店街の夜に、人の流れと会話を生み出したい。パルミラ通り一帯を会場にした夜市を、ただの催事ではなく、街の記憶に残る体験として届ける必要がありました。",
+    "approach": "台湾夜市と沖縄文化が交差する「混沌一如」の世界観を設定し、ネオンと提灯の夜景をビジュアルの軸に。ポスター、バナー、公式サイトのトーンを揃え、出店情報・アクセス・スケジュールをサイトで一元発信できるようにしました。2026年は台風による中止を受け、延期開催（9月27日、パルミラ通り30周年・てるりん祭と同日）の告知にもサイトで素早く対応しました。",
+    "deliverables": ["キービジュアル・ポスター（2025・2026）", "Webバナー", "公式サイト（MIKKA by Cignalsで制作）"],
+    "result": "2025年は7月11日・12日の2日間、提灯が灯る通りが来場者で埋まりました。2026年も開催が決まり、延期開催の情報発信まで継続して担当しています。",
+    "mainImage": "images/works/palmyra/palmyra-street.jpg",
+    "gallery": [
+      "images/works/palmyra/palmyra-2025-poster.jpg",
+      "images/works/palmyra/palmyra-crowd.jpg",
+      "images/works/palmyra/palmyra-2026-kv.jpg",
+      "images/works/palmyra/palmyra-2026-site.jpg",
+      "images/works/palmyra/palmyra-lanterns.jpg",
+      "images/works/palmyra/palmyra-day.jpg"
     ],
+    "links": [
+      { "label": "公式サイト", "url": "https://www.kozayoichi.com/" }
+    ],
+    "credits": { "主催": "沖縄市コザパルミラ通り会", "後援": "沖縄市" },
+    "contactType": "event",
+    "status": "published",
+    "memo": "来場者数がわかれば result に追記する"
+  },
+  {
+    "id": "koza-basecamp",
+    "title": "KOZA BASECAMP",
+    "subtitle": "クリエイターと挑戦する人が集まる、コザの拠点",
+    "type": "own",
+    "featured": true,
+    "year": "2025–",
+    "client": "",
+    "location": "沖縄市コザ一番街",
+    "summary": "場所を「貸す」のではなく「一緒に使う」。企画が生まれ続けるコミュニティ＆創作スタジオ。",
+    "roles": ["企画", "運営"],
+    "areas": ["企画・プロデュース", "イベント・体験づくり"],
+    "background": "コザには、クリエイターや挑戦する人が気軽に集まり、相談し、手を動かせる場所が少なかった。2025年春、コザ一番街にCignalsの拠点としてKOZA BASECAMPを開きました。",
+    "approach": "2階はカフェ＆バーとギャラリー、3階はワークスペースとレコーディングブース。場所を貸すだけでなく、利用者と一緒にプロジェクトを立ち上げる場として運営し、街と人が交わる企画をBASECAMP発で仕掛けています。",
+    "deliverables": ["拠点の企画・運営", "空間づくり", "BASECAMP発の企画・イベント"],
+    "result": "パルミラ夜市やPaint The City、ONE NIGHT MAKE LOVEなどの企画が生まれ、KOZAROCKSの会場や企業研修の場としても使われるようになりました。",
+    "mainImage": "images/basecamp-meetup.webp",
+    "gallery": [
+      "images/basecamp-work.webp",
+      "images/basecamp-workspace.jpg",
+      "images/services/IMG_4033.webp"
+    ],
+    "links": [
+      { "label": "拠点情報", "url": "https://cignals.notion.site/koza-basecamp" }
+    ],
+    "credits": {},
+    "contactType": "training",
+    "status": "published",
+    "memo": ""
+  },
+  {
+    "id": "ksa-roots-market",
+    "title": "KSA ROOTS MARKET",
+    "subtitle": "挑戦する人の「はじめの一歩」を街で育てるマーケット",
+    "type": "client",
+    "featured": true,
+    "year": "2026",
+    "client": "コザスタートアップ商店街（Koza Startup Arcade）",
+    "location": "Koza Startup Arcade・一番街商店街周辺",
+    "summary": "「応援が光になる」マーケットの世界観を、イラストのKVから出店者募集サイトまで一貫制作。",
+    "roles": ["制作"],
+    "areas": ["クリエイティブ制作"],
+    "background": "創業準備中・創業まもない人が、完成されたブランドでなくても出店し、街の人に応援されながら育っていく。モノを売るだけではないマーケットの考え方を、来場者にも出店希望者にも伝える必要がありました。",
+    "approach": "「ROOTS（根っこ）」をテーマに、街の人や来場者が光や水のように挑戦者を育てていく様子を、手描き感のあるイラストで表現。KVを軸にポスター、チラシ、会場マップを展開し、出店・協賛の募集、事前ワークショップの案内、FAQ、出店規約までをWebサイトで完結できる設計にしました。",
+    "deliverables": ["キービジュアル・イラスト", "A2ポスター・A4チラシ", "会場マップ", "出店者募集サイト（MIKKA by Cignalsで制作）"],
+    "result": "2026年1月25日の開催に続き、8月30日には夏版を開催。出店者募集から当日の案内までを、同じ世界観で届けています。",
+    "mainImage": "images/works/ksa/ksa-market.jpg",
+    "gallery": [
+      "images/works/ksa/ksa-2026-summer-kv.jpg",
+      "images/works/ksa/ksa-site.jpg",
+      "images/works/ksa/ksa-2026-winter-poster.jpg",
+      "images/works/ksa/ksa-tree.jpg",
+      "images/works/ksa/ksa-story-panel.jpg",
+      "images/works/ksa/ksa-workshop.jpg"
+    ],
+    "links": [
+      { "label": "公式サイト", "url": "https://roots-market.koza.rocks/" }
+    ],
+    "credits": {},
+    "contactType": "production",
+    "status": "published",
+    "memo": ""
+  },
+  {
+    "id": "paint-the-city",
+    "title": "Paint The City",
+    "subtitle": "街のシャッターをキャンバスに変えるアートプロジェクト",
+    "type": "own",
+    "featured": false,
+    "year": "2024",
+    "client": "",
+    "location": "沖縄市コザ",
+    "summary": "閉じたシャッターを、地域のアーティストの手で街の表情へ変える自社企画。",
+    "roles": ["企画", "制作", "運営"],
+    "areas": ["企画・プロデュース", "クリエイティブ制作"],
+    "background": "商店街に並ぶ閉じたシャッターを、地域の負として見るのか、まだ描かれていないキャンバスとして見るのか。後者の立場から、Cignalsが自分たちで立ち上げたプロジェクトです。",
+    "approach": "実現には、アーティストの選定やディレクションだけでなく、地権者、商店街組合、行政とのていねいな接続が欠かせませんでした。企画からアートディレクション、各所との合意形成までを自社で進め、「面白い」だけで終わらず、街に残るビジュアル接点として設計しました。",
+    "deliverables": ["企画・アートディレクション", "アーティストとの制作調整", "地権者・商店街・行政との合意形成", "キービジュアル", "記録・ドキュメント"],
+    "result": "",
+    "mainImage": "images/works/paint-the-city/ptc-01.jpg",
+    "gallery": [
+      "images/works/paint-the-city/ptc-02.jpg",
+      "images/works/paint-the-city/ptc-kv.jpg"
+    ],
+    "links": [
+      { "label": "制作の記録（Journal）", "url": "journal.html#2026-paint-the-city-note" }
+    ],
+    "credits": {},
+    "contactType": "project",
+    "status": "published",
+    "memo": "描かれたシャッターの数や、その後の反響があれば result に追記する"
+  },
+  {
+    "id": "mikka",
+    "title": "MIKKA by Cignals",
+    "subtitle": "スマホ時代に最適化された、名刺代わりのWebサイトを。",
+    "type": "own",
+    "featured": false,
+    "year": "2025–",
+    "client": "",
+    "location": "Online",
+    "summary": "地域の事業者やイベントが、すぐに使えるWebサイトを持てるようにした自社のWeb制作サービス。",
+    "roles": ["企画", "制作"],
+    "areas": ["クリエイティブ制作"],
+    "background": "地域のイベントや小さな事業者ほど、伝えたいことがあるのにWebサイトを持てていない。制作費や更新の手間がハードルになっている状況を、自分たちのサービスで変えたいと考えました。",
+    "approach": "スマートフォンで見られることを前提に、名刺代わりになるサイトを短期間でつくれる仕組みとして設計。LP、コーポレートサイト、イベントサイトまで、必要に応じて撮影やブランディングも組み合わせています。",
+    "deliverables": ["サービス設計", "LP・コーポレートサイト・イベントサイト制作", "撮影・ブランディング"],
+    "result": "株式会社LIFESHIFTのセミナーLP、WithBlue DMCのブランディングとWebサイト、ユアトリー株式会社のコーポレートサイトと撮影、パルミラ夜市やKSA ROOTS MARKETのイベントサイトなどを制作しました。",
+    "mainImage": "images/works/mikka/mikka-kv.jpg",
+    "gallery": [
+      "images/works/mikka/mikka-mockup.jpg",
+      "images/works/mikka/mikka-withblue.jpg",
+      "images/works/mikka/mikka-yourtory.jpg",
+      "images/works/mikka/mikka-lifeshift.jpg"
+    ],
+    "links": [
+      { "label": "MIKKA by Cignals", "url": "https://mikka.cignals.jp/" }
+    ],
+    "credits": {},
+    "contactType": "production",
+    "status": "published",
+    "memo": "MIKKAのURLを確認する"
+  },
+  {
+    "id": "arcade-resort-okinawa-web",
+    "title": "Arcade Resort Okinawa 公式サイト",
+    "subtitle": "コザ一番街のホステルのWebサイト",
+    "type": "client",
+    "featured": false,
+    "year": "2026",
+    "client": "Arcade Resort Okinawa",
+    "location": "沖縄市コザ一番街",
+    "summary": "「街のつづきに、泊まる。」宿と街を一緒に紹介する、日英2言語のWebサイト。",
+    "roles": ["制作"],
+    "areas": ["クリエイティブ制作"],
+    "background": "コザ一番街のアーケード内にある全9室・全室個室のホステル。客室の情報だけでなく、泊まることで街そのものを楽しめる宿であることを、国内外のゲストに伝える必要がありました。",
+    "approach": "「街のつづきに、泊まる。」をコンセプトに、客室・一棟貸しの紹介と並べて、コザの食・ライブハウス・モデルコースなど街のガイドを掲載。日本語と英語の2言語で、予約やLINEへの導線をわかりやすく配置しました。",
+    "deliverables": ["Webサイト制作（日本語・英語）", "客室・一棟貸しページ", "コザの街ガイド", "お知らせ更新の仕組み"],
+    "result": "",
+    "mainImage": "images/works/aro/aro-site.jpg",
+    "gallery": [
+      "images/works/aro/aro-entrance.jpg",
+      "images/works/aro/aro-room.jpg",
+      "images/works/aro/aro-suncity.jpg"
+    ],
+    "links": [
+      { "label": "公式サイト", "url": "https://ar-okinawa.com/" }
+    ],
+    "credits": {},
+    "contactType": "production",
+    "status": "published",
+    "memo": ""
+  },
+  {
+    "id": "workpro-office-web",
+    "title": "WORK PRO OFFICE サイトリニューアル",
+    "subtitle": "沖縄のイルミネーション・映像・イベント演出会社のWebサイト",
+    "type": "client",
+    "featured": false,
+    "year": "2026",
+    "client": "株式会社WORKPRO OFFICE",
+    "location": "沖縄県読谷村",
+    "summary": "30年以上の実績が伝わる、ミニマルで実績中心のコーポレートサイトへ全面リニューアル。",
+    "roles": ["企画", "制作"],
+    "areas": ["クリエイティブ制作"],
+    "background": "1986年創業、全島エイサーまつりのフィナーレ演出やリゾートのイルミネーションなどを手がける演出会社。長く続くプロジェクトの実績と信頼感が、サイトから伝わりにくい状態でした。",
+    "approach": "作品の写真と映像が主役になるよう、余白を活かしたミニマルなデザインに全面リニューアル。ファーストビューに映像を据え、実績を一覧と詳細モーダルで見せる構成にし、実績やお知らせを更新しやすい仕組みも整えました。",
+    "deliverables": ["情報設計", "UIデザイン", "フロントエンド実装", "実績・お知らせの更新の仕組み"],
+    "result": "",
+    "mainImage": "images/works/workpro/workpro-site.jpg",
+    "gallery": [],
+    "links": [
+      { "label": "サイトを見る", "url": "https://workpro-office.com/" }
+    ],
+    "credits": {},
+    "contactType": "production",
+    "status": "published",
+    "memo": ""
+  },
+  {
+    "id": "one-night-make-love-vol2",
+    "title": "ONE NIGHT MAKE LOVE vol.2",
+    "subtitle": "一泊二日で一曲をつくる、音楽制作プロジェクト",
+    "type": "own",
+    "featured": false,
+    "year": "2026",
+    "client": "",
+    "location": "Arcade Resort Okinawa / KOZA BASECAMP",
+    "summary": "コザの宿に泊まり、BASECAMPのスタジオで一曲を仕上げる企画の第二弾。",
+    "roles": ["企画", "制作"],
+    "areas": ["企画・プロデュース", "イベント・体験づくり"],
+    "background": "コザ一番街のホステルとKOZA BASECAMPのスタジオ。街にある2つの拠点をつなげば、ここでしか生まれない作品がつくれるのではないか。そこから始まった企画です。",
+    "approach": "Arcade Resort Okinawaに一泊し、KOZA BASECAMPのスタジオで1曲を作り上げるルールを設定。1泊2日という限られた時間と、コザの街の空気感の中で、リアルなセッションを記録しました。",
+    "deliverables": ["企画・構成", "楽曲制作セッション", "デザイン", "配信リリース"],
+    "result": "2026年4月7日に各社配信でリリースしました。",
+    "mainImage": "images/projects/journal-2026-one-night-makelove-vol2/photos/01-instagram-post-7.jpg",
+    "gallery": [
+      "images/projects/journal-2026-one-night-makelove-vol2/photos/02-instagram-post-9.jpg"
+    ],
+    "links": [
+      { "label": "制作の記録（Journal）", "url": "journal.html#2026-one-night-make-love-vol2" }
+    ],
+    "credits": {
+      "Beat": "Bazzroar",
+      "Rap": "SLIM BOY & LAZZ",
+      "企画・構成": "KOZA BASECAMP / Yuki Motomura",
+      "Director": "Yuki Motomura（FEELBOMB）",
+      "Design": "MEDAMAYAKI"
+    },
+    "contactType": "project",
+    "status": "published",
+    "memo": ""
+  },
+  {
+    "id": "okano-valve-training",
+    "title": "岡野バルブ製造 企業研修",
+    "subtitle": "KOZA BASECAMPを使った企業研修",
+    "type": "client",
+    "featured": false,
+    "year": "2026",
+    "client": "岡野バルブ製造株式会社",
+    "location": "KOZA BASECAMP",
+    "summary": "ブレストから個人作業まで、一つの施設で完結する研修の場を提供。",
+    "roles": ["運営"],
+    "areas": ["イベント・体験づくり"],
+    "background": "会議室だけで完結しない、チームで議論し、考えを整理できる研修の場が求められていました。",
+    "approach": "2階はホワイトボードを囲むブレインストーミングの場、3階は個人ワークや資料作成に集中できるワークスペースとして、目的に合わせてフロアを使い分けられるようにしました。",
+    "deliverables": ["研修会場の提供", "フロアの使い分け提案"],
+    "result": "ディスカッションから個人の集中作業まで、一つの施設で研修を完結していただきました。",
+    "mainImage": "images/projects/2026-okano-valve-training/photos/01-okano-valve-training.jpg",
+    "gallery": [
+      "images/projects/2026-okano-valve-training/photos/02-okano-valve-training.jpg",
+      "images/projects/2026-okano-valve-training/photos/03-okano-valve-training.jpg"
+    ],
+    "links": [
+      { "label": "研修の記録（Journal）", "url": "journal.html#2026-okano-valve-training" }
+    ],
+    "credits": {},
+    "contactType": "training",
+    "status": "published",
+    "memo": ""
+  },
+  {
+    "id": "okinawa-city-basketball-day",
+    "title": "オキナワシティ バスケットボールデイ",
+    "subtitle": "沖縄アリーナのバスケットボールイベント",
+    "type": "client",
+    "featured": false,
+    "year": "2026",
+    "client": "沖縄アリーナ",
+    "location": "沖縄アリーナ",
+    "summary": "「遊ぶ・観る・学ぶ・食べる」を、家族連れに届く明快なデザインに。",
+    "roles": ["制作"],
+    "areas": ["クリエイティブ制作"],
+    "background": "",
+    "approach": "",
+    "deliverables": ["メインポスター", "キービジュアル"],
+    "result": "",
     "mainImage": "",
     "gallery": [],
-    "externalUrl": "https://workpro-office.com/",
+    "links": [],
+    "credits": {},
+    "contactType": "production",
     "status": "draft",
-    "needsAssets": true
+    "memo": "非公開。In progress内に素材が見つからなかったため、ポスター画像を images/works/ に追加してから status を published にする"
   }
 ]

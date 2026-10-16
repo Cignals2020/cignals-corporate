@@ -563,3 +563,242 @@ body[data-page="produce"] .produce-hero{max-width:var(--max);margin:0 auto;paddi
   .service-detail-body h2{font-size:36px}
   .service-detail-body .lead{font-size:18px}
 }
+
+
+/* =====================================================================
+   2026-10 リニューアル
+   「何者か・何を頼めるか・何をしてきたか・どう相談するか」が伝わる構成へ
+   ===================================================================== */
+
+/* --- Header: 相談するボタン / 現在地 --- */
+.nav{align-items:center}
+.nav a[aria-current="page"]{color:var(--ink)}
+.nav .nav-cta{padding:9px 18px;border-radius:999px;background:var(--red);color:#fff!important;font-weight:800;letter-spacing:.06em}
+.nav .nav-cta:hover{background:var(--ink);color:#fff!important}
+@media (max-width:900px){
+  .nav .nav-cta{margin:14px clamp(20px,4vw,40px) 18px;padding:14px 18px!important;text-align:center;border-bottom:0!important}
+  .nav .nav-cta:hover{background:var(--ink)!important}
+}
+
+/* --- Buttons --- */
+.button-outline{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.button-outline:hover{background:var(--ink);color:#fff}
+
+/* --- Badge: 自社事業 / クライアントワーク --- */
+.type-badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.06em;line-height:1.4;white-space:nowrap}
+.type-own{background:var(--red);color:#fff}
+.type-client{background:var(--ink);color:#fff}
+
+/* --- Home: Hero --- */
+.hero-renewal{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(56px,8vw,110px)!important}
+.hero-renewal h1{font-size:clamp(38px,5.6vw,80px)!important;line-height:1.12!important;letter-spacing:-.05em!important;word-break:keep-all}
+.hero-sub{margin:22px 0 0;font-size:clamp(16px,1.6vw,20px);font-weight:800;color:var(--ink)}
+.hero-lead{margin:12px 0 0;max-width:560px;color:var(--muted);font-size:clamp(15px,1.4vw,17px);line-height:2}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-visual{margin:0;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--ink);box-shadow:var(--shadow-strong)}
+.hero-visual img{width:100%;height:100%;object-fit:cover}
+
+/* --- Home: What we do --- */
+.area-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.area-card{position:relative;display:flex;flex-direction:column;padding:clamp(26px,3vw,40px);border:1px solid var(--line);border-radius:28px;background:var(--paper);overflow:hidden}
+.area-num{font-size:13px;font-weight:900;color:var(--red);letter-spacing:.1em}
+.area-en{margin:18px 0 6px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.area-card h3{margin:0 0 18px;font-size:clamp(24px,2.4vw,32px);line-height:1.2;letter-spacing:-.04em}
+.area-card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;flex:1}
+.area-card li{position:relative;padding-left:18px;color:var(--ink);font-size:15px;line-height:1.7}
+.area-card li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--red)}
+.area-case{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.area-case a{color:var(--ink);font-weight:700}
+.area-card .text-link{margin-top:14px}
+
+/* --- Home: Projects (badge in caption) --- */
+.home-project-caption .project-name-label{display:flex;align-items:center;gap:10px;color:var(--muted)!important;letter-spacing:.06em!important}
+
+/* --- Home: How we work --- */
+.how-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none;counter-reset:none}
+.how-steps li{position:relative;padding:24px 20px 26px;border-top:3px solid var(--ink);background:var(--paper);border-radius:0 0 20px 20px}
+.how-steps li:last-child{border-top-color:var(--red)}
+.how-steps span{font-size:12px;font-weight:900;color:var(--red);letter-spacing:.1em}
+.how-steps h3{margin:10px 0 8px;font-size:22px;letter-spacing:-.03em}
+.how-steps p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+
+/* --- Home: なぜコザか --- */
+.home-why{max-width:none;background:var(--ink);color:#fff}
+.home-why-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.home-why h2{margin:0 0 22px;font-size:clamp(32px,4.6vw,60px);line-height:1.1;letter-spacing:-.05em}
+.home-why p:not(.eyebrow){color:#cfc3bf;font-size:clamp(15px,1.5vw,18px);line-height:2}
+.home-why .text-link{color:#fff}
+.home-why-visual{margin:0;border-radius:24px;overflow:hidden;aspect-ratio:4/3}
+.home-why-visual img{width:100%;height:100%;object-fit:cover}
+
+/* --- Home: Contact choices --- */
+.cta-choice h2{margin-bottom:12px!important}
+.cta-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px}
+.cta-choices a{display:grid;gap:4px;padding:22px 24px;border-radius:22px;background:#fff;color:var(--ink);text-decoration:none;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out)}
+.cta-choices a:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+.cta-choices small{color:var(--red);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.cta-choices strong{font-size:clamp(18px,1.8vw,22px);letter-spacing:-.02em}
+.cta-choices span{color:var(--muted);font-size:13px}
+.cta-sub{margin:22px 0 0;font-size:14px}
+.cta-sub a{color:#fff;font-weight:800}
+
+/* --- Projects page --- */
+.project-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.project-filter button{padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--muted);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.project-filter button.is-active{background:var(--ink);border-color:var(--ink);color:#fff}
+.project-index{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-bottom:clamp(56px,8vw,96px)}
+.project-index-card{display:grid;gap:6px;align-content:start;text-decoration:none;color:var(--ink)}
+.project-index-card[hidden],.project-case[hidden]{display:none!important}
+.project-index-media{display:block;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--soft);margin-bottom:6px}
+.project-index-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out)}
+.project-index-card:hover img{transform:scale(1.05)}
+.project-index-card .type-badge{justify-self:start}
+.project-index-card strong{font-size:17px;line-height:1.35;letter-spacing:-.02em}
+.project-index-card small{color:var(--muted);font-size:12px}
+body[data-page="projects"] #projectGrid.project-case-list{max-width:var(--max)!important;gap:clamp(56px,8vw,110px)!important}
+.project-case{display:grid;gap:clamp(22px,3vw,36px);scroll-margin-top:96px;padding-bottom:clamp(40px,6vw,80px);border-bottom:1px solid var(--line)}
+.case-hero{border-radius:28px;overflow:hidden;aspect-ratio:16/9;background:var(--ink)}
+.case-hero img{width:100%;height:100%;object-fit:cover}
+.case-body{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.7fr);grid-template-areas:"head meta" "text meta";gap:clamp(18px,3vw,40px) clamp(28px,5vw,64px);align-items:start}
+.case-head{grid-area:head}
+.case-head h2{margin:12px 0 6px;font-size:clamp(32px,4.6vw,60px);line-height:1.05;letter-spacing:-.05em;word-break:keep-all}
+.case-subtitle{margin:0;color:var(--muted);font-size:15px}
+.case-head .lead{margin:18px 0 0;font-size:clamp(17px,1.7vw,21px);line-height:1.8}
+.case-meta{grid-area:meta;position:sticky;top:96px;display:grid;gap:18px;padding:22px;border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.case-info{display:grid;gap:12px;margin:0}
+.case-info div{display:grid;gap:2px}
+.case-info dt{color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.12em}
+.case-info dd{margin:0;font-size:14px;font-weight:700;line-height:1.6}
+.case-roles p{margin:0 0 8px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.12em}
+.case-roles ul{display:flex;gap:6px;margin:0;padding:0;list-style:none}
+.case-roles li{flex:1;padding:8px 0;border-radius:10px;background:var(--soft);color:#b5aaa6;text-align:center;font-size:13px;font-weight:800}
+.case-roles li.is-on{background:var(--ink);color:#fff}
+.case-text{grid-area:text;display:grid;gap:26px}
+.case-block h3{margin:0 0 8px;font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--red)}
+.case-block p{margin:0;color:var(--ink);font-size:16px;line-height:2}
+.case-deliverables{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.case-deliverables li{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:14px}
+.case-links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.case-links .text-link{margin-top:0}
+.case-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.case-gallery figure{margin:0;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:var(--soft)}
+.case-gallery img{width:100%;height:100%;object-fit:cover}
+.case-cta .button{margin-top:0}
+
+/* --- Services page --- */
+.area-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.area-jump a{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font-weight:800;text-decoration:none}
+.area-jump a:hover{border-color:var(--red);color:var(--red)}
+.area-jump span{color:var(--red);font-size:12px}
+.service-area{scroll-margin-top:90px;padding-bottom:clamp(64px,9vw,120px)!important}
+.service-area-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;margin-bottom:clamp(28px,4vw,48px)}
+.service-area-visual{border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:var(--ink)}
+.service-area-visual img{width:100%;height:100%;object-fit:cover}
+.service-area-copy h2{margin:0 0 18px;font-size:clamp(34px,5vw,64px);line-height:1.05;letter-spacing:-.055em}
+.service-area-copy .lead{margin:0 0 14px;font-size:clamp(18px,1.8vw,22px);line-height:1.7}
+.service-area-copy p:not(.eyebrow):not(.lead){color:var(--muted);line-height:2}
+.service-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.service-items article{padding:24px 26px;border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.service-items h3{margin:0 0 8px;font-size:clamp(18px,1.8vw,22px);letter-spacing:-.02em}
+.service-items p{margin:0;color:var(--muted);line-height:1.85}
+.service-items p a{color:var(--ink);font-weight:700}
+.service-items .text-link{margin-top:12px}
+.service-item-feature{border-color:var(--ink)!important;box-shadow:inset 0 0 0 1px var(--ink)}
+.service-item-tag{display:inline-block;margin:0 0 10px!important;padding:3px 10px;border-radius:999px;background:var(--red);color:#fff!important;font-size:11px;font-weight:800}
+.service-cases{margin:24px 0 0;color:var(--muted);font-size:14px}
+.service-cases a{color:var(--ink);font-weight:700}
+.service-area-actions{display:flex;flex-wrap:wrap;gap:12px}
+.place-grid-compact{margin-top:12px}
+.place-grid-compact .place-card{min-height:clamp(320px,30vw,420px)}
+.place-grid-compact .place-card h3{font-size:clamp(32px,4vw,56px)}
+.engage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.engage-grid article{display:flex;flex-direction:column;padding:clamp(26px,3vw,38px);border:1px solid var(--line);border-radius:28px;background:var(--paper)}
+.engage-label{margin:0;color:var(--red);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.engage-grid h3{margin:12px 0 10px;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.03em}
+.engage-grid p{color:var(--muted);line-height:1.85;margin:0}
+.engage-grid .engage-price{margin-top:auto;padding-top:18px;color:var(--ink);font-weight:800}
+
+/* --- About page --- */
+.define-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0}
+.define-grid div{padding:24px;border:1px solid var(--line);border-radius:22px;background:var(--paper)}
+.define-grid dt{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.1em}
+.define-grid dd{margin:10px 0 0;font-size:clamp(16px,1.5vw,19px);font-weight:700;line-height:1.7}
+.about-why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.about-why-visual{margin:0;border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+.about-why-visual img{width:100%;height:100%;object-fit:cover}
+.about-why-copy h2{margin:0 0 20px;font-size:clamp(32px,4.6vw,60px);line-height:1.1;letter-spacing:-.05em}
+.about-why-copy p:not(.eyebrow){color:var(--muted);font-size:clamp(15px,1.4vw,17px);line-height:2.05}
+.values-grid-three{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.values-grid-three article{min-height:clamp(280px,24vw,360px)!important}
+.values-grid-three h3{font-size:clamp(24px,2.6vw,36px)!important}
+.base-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,34px)}
+.base-grid article{display:flex;flex-direction:column}
+.base-grid figure{margin:0 0 18px;border-radius:24px;overflow:hidden;aspect-ratio:4/3}
+.base-grid img{width:100%;height:100%;object-fit:cover}
+.place-kicker-inline{margin:0;color:var(--red);font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.base-grid h3{margin:6px 0 10px;font-size:clamp(26px,3vw,40px);letter-spacing:-.05em}
+.base-grid p:not(.place-kicker-inline){margin:0;color:var(--muted);line-height:1.95}
+.about-next{max-width:none;background:var(--soft)}
+.about-next-inner{max-width:var(--max);margin:0 auto}
+.about-next h2{margin:0 0 18px;font-size:clamp(28px,4.2vw,54px);line-height:1.15;letter-spacing:-.05em}
+.about-next p:not(.eyebrow){max-width:720px;color:var(--muted);font-size:clamp(15px,1.5vw,18px);line-height:2}
+.company-table{display:grid;margin:0;border-top:1px solid var(--line)}
+.company-table div{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.company-table dt{color:var(--muted);font-weight:700}
+.company-table dd{margin:0;line-height:1.8}
+
+/* --- Contact page --- */
+.contact-menu-links a{display:grid;gap:2px;padding:14px 16px;border:1px solid transparent;border-radius:14px;background:var(--soft);color:var(--ink);text-decoration:none;transition:border-color .3s ease,background .3s ease}
+.contact-menu-links a span{color:var(--muted);font-size:13px}
+.contact-menu-links a:hover,.contact-menu-links a.is-active{border-color:var(--red);background:#fff}
+.contact-consult{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.contact-consult h3{margin:0 0 8px;font-size:20px}
+.contact-consult p:not(.eyebrow){margin:0;color:var(--muted);line-height:1.8}
+.form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+
+/* --- Responsive --- */
+@media (max-width:1040px){
+  .how-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .define-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .hero-renewal,.home-why-inner,.service-area-head,.about-why-grid,.case-body{grid-template-columns:1fr}
+  .hero-visual{aspect-ratio:4/3;order:-1}
+  .hero-renewal h1{font-size:clamp(32px,8.4vw,52px)!important}
+  .area-grid,.engage-grid,.cta-choices,.base-grid,.values-grid-three{grid-template-columns:1fr!important}
+  .case-body{grid-template-areas:"head" "meta" "text"}
+  .case-meta{position:static}
+  .service-items{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .how-steps{grid-template-columns:1fr}
+  .define-grid,.form-row{grid-template-columns:1fr}
+  .company-table div{grid-template-columns:1fr;gap:4px}
+  .project-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .case-hero,.hero-visual,.service-area-visual{border-radius:18px}
+  .case-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* --- Home: 実績ショーケースを「写真＋下に説明」の2列カードに --- */
+body[data-page="home"] .home-project-showcase{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,3vw,40px) clamp(16px,2.4vw,28px)}
+body[data-page="home"] .home-project-card,
+body[data-page="home"] .home-project-card:nth-child(even){display:flex;flex-direction:column;gap:0}
+body[data-page="home"] .home-project-media{min-height:0!important;aspect-ratio:4/3;border-radius:22px;box-shadow:none}
+body[data-page="home"] .home-project-caption,
+body[data-page="home"] .home-project-card:nth-child(even) .home-project-caption{max-width:none;padding:18px 4px 0!important;pointer-events:auto}
+body[data-page="home"] .home-project-caption h3{margin:10px 0 8px;font-size:clamp(24px,2.6vw,34px);text-shadow:none}
+body[data-page="home"] .home-project-caption p{font-size:15px}
+@media (max-width:760px){body[data-page="home"] .home-project-showcase{grid-template-columns:1fr}}
+
+/* --- Home: なぜコザか（明るい背景） --- */
+.home-why{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+.home-why p:not(.eyebrow){color:var(--muted)}
+.home-why .text-link{color:var(--red)}
+.case-gallery figure.is-portrait{background:#1a1414}
+.case-gallery figure.is-portrait img{object-fit:contain}
+.service-area-copy h2{font-size:clamp(30px,3.6vw,50px);word-break:keep-all;overflow-wrap:anywhere}
+.contact-form label{display:block}
+.contact-form label input,.contact-form label select,.contact-form label textarea{display:block;margin-top:8px}
+.contact-form label > span{margin-left:4px}
+.contact-aside h2{font-size:clamp(24px,2.6vw,34px)!important;line-height:1.25!important}
+.contact-menu-links a strong{font-size:15px}

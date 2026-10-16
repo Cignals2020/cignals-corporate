@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects — Cignals合同会社</title>
-  <meta name="description" content="Cignalsの代表的なプロジェクト実績。Paint The City、パルミラ夜市、KOZAROCKS、workproofficeサイトリニューアルを掲載しています。">
-  <meta property="og:title" content="Projects — Cignals合同会社">
-  <meta property="og:description" content="Cignalsの代表的なプロジェクト実績。Paint The City、パルミラ夜市、KOZAROCKS、workproofficeサイトリニューアルを掲載しています。">
+  <title>Projects｜Cignals 沖縄・コザの企画・クリエイティブ会社</title>
+  <meta name="description" content="Cignalsの実績紹介。KOZAROCKS、パルミラ夜市、KOZA BASECAMP、Paint The Cityなど、自社事業とクライアントワークを、企画の背景・担当範囲・制作物・結果とあわせて紹介しています。">
+  <meta property="og:title" content="Projects｜Cignals">
+  <meta property="og:description" content="Cignalsがどんな企画に関わり、何を考え、何をつくったのか。自社事業とクライアントワークの実績紹介。">
   <meta property="og:type" content="website">
   <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
@@ -22,12 +22,11 @@
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Cignals Home"><img src="images/brand/Cignals-logo.webp" alt="Cignals"></a>
     <nav class="nav" id="primaryNav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="journal.html">Journal</a>
+      <a href="projects.html" aria-current="page">Projects</a>
       <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="journal.html">Journal</a>
+      <a class="nav-cta" href="contact.html">相談する</a>
     </nav>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primaryNav">
       <span></span><span></span><span></span>
@@ -36,16 +35,29 @@
   <main>
     <section class="page-hero">
       <p class="eyebrow">Projects</p>
-      <h1>Projects</h1>
+      <h1>どんな企画に関わり、<br>何をつくったか。</h1>
+      <p>Cignalsが自分たちで仕掛けている事業と、クライアントと一緒につくった仕事。企画の背景、担当した範囲、完成したもの、その後までを紹介します。</p>
     </section>
     <section class="section section-tight">
-      <div id="projectGrid" class="cards cards-projects"></div>
+      <div class="project-filter" role="group" aria-label="実績の絞り込み">
+        <button type="button" class="is-active" data-filter="all" aria-pressed="true">すべて</button>
+        <button type="button" data-filter="own" aria-pressed="false">自社事業</button>
+        <button type="button" data-filter="client" aria-pressed="false">クライアントワーク</button>
+      </div>
+      <div id="projectIndex" class="project-index"></div>
+      <div id="projectGrid" class="project-case-list"></div>
+    </section>
+    <section class="cta">
+      <p class="eyebrow">Contact</p>
+      <h2>次のプロジェクトを、<br>一緒につくりませんか。</h2>
+      <p>制作の依頼から、企画・実行までまるごとの相談まで。内容を選んでお問い合わせください。</p>
+      <a class="button button-dark arrow-button" href="contact.html">相談する <span aria-hidden="true">→</span></a>
     </section>
   </main>
   <footer class="footer">
     <div>
       <strong>CIGNALS</strong><br>
-      誰もが自分らしく創造的でいられる社会を実現する。
+      誰もが自分らしく、創造的でいられる社会へ。
     </div>
     <div>
       Cignals合同会社<br>

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact — Cignals合同会社</title>
-  <meta name="description" content="Cignalsへのお問い合わせページ。企業研修、クリエイター滞在、制作・イベントプロデュース、Webリニューアルの相談を受け付けています。">
-  <meta property="og:title" content="Contact — Cignals合同会社">
-  <meta property="og:description" content="Cignalsへのお問い合わせページ。企業研修、クリエイター滞在、制作・イベントプロデュース、Webリニューアルの相談を受け付けています。">
+  <title>Contact｜Cignals 沖縄・コザの企画・クリエイティブ会社</title>
+  <meta name="description" content="Cignalsへのお問い合わせ。WEB・映像・デザインの制作依頼、イベントの企画・運営、企画・プロジェクトのご相談（月額伴走を含む）、研修・滞在プログラムなど、内容を選んでご相談いただけます。">
+  <meta property="og:title" content="Contact｜Cignals">
+  <meta property="og:description" content="制作の依頼から、企画・プロジェクトの相談まで。Cignalsへのお問い合わせページです。">
   <meta property="og:type" content="website">
   <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
@@ -22,12 +22,11 @@
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Cignals Home"><img src="images/brand/Cignals-logo.webp" alt="Cignals"></a>
     <nav class="nav" id="primaryNav" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="journal.html">Journal</a>
       <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="journal.html">Journal</a>
+      <a class="nav-cta" href="contact.html" aria-current="page">相談する</a>
     </nav>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primaryNav">
       <span></span><span></span><span></span>
@@ -36,30 +35,61 @@
   <main>
     <section class="page-hero">
       <p class="eyebrow">Contact</p>
-      <h1>まずは、話を聞かせてください。</h1>
-      <p>企画段階でのご相談、大歓迎です。「コザで何かやりたい」という段階でも、お気軽にご連絡ください。</p>
+      <h1>どんなことを、<br>相談したいですか？</h1>
+      <p>制作のご依頼から、企画・プロジェクトのご相談まで。内容を選んでお送りください。企画が固まる前の段階でも大丈夫です。</p>
     </section>
     <section class="section contact-layout section-tight">
       <aside class="contact-aside">
-        <h2>どんな相談でもお気軽にどうぞ</h2>
-        <p>ご予算・規模・目的をお聞きして、最適なプランをご提案します。一緒に考えます。</p>
-        <div class="contact-menu">
-          <span>企業研修・合宿プログラム</span>
-          <span>クリエイター滞在プログラム</span>
-          <span>制作・イベントプロデュース</span>
-          <span>Webリニューアル</span>
-          <span>その他のご相談・取材・提携</span>
+        <h2>ご相談いただける内容</h2>
+        <p>通常2営業日以内にご返信します。オンラインでの打ち合わせ、KOZA BASECAMPでの対面、どちらも可能です。</p>
+        <div class="contact-menu contact-menu-links">
+          <a href="?type=production#contactForm" data-type="production"><strong>制作の依頼</strong><span>WEBサイト・映像・写真・グラフィック・ブランディング</span></a>
+          <a href="?type=event#contactForm" data-type="event"><strong>イベントの企画・運営</strong><span>企画・制作・当日の運営、プロモーション</span></a>
+          <a href="?type=project#contactForm" data-type="project"><strong>企画・プロジェクトの相談</strong><span>新規企画、商品・ブランド開発、月額伴走</span></a>
+          <a href="?type=training#contactForm" data-type="training"><strong>研修・滞在プログラム</strong><span>企業・行政向けの研修、合宿、クリエイター滞在</span></a>
+          <a href="?type=other#contactForm" data-type="other"><strong>取材・協業・その他</strong><span>メディア取材、協業のご提案など</span></a>
+        </div>
+        <div class="contact-consult">
+          <p class="eyebrow">Free Consultation</p>
+          <h3>まだ内容が固まっていない方へ</h3>
+          <p>「何から相談すればいいかわからない」段階なら、30分の無料オンライン相談もご利用いただけます。</p>
+          <a class="text-link arrow-link" href="https://timerex.net/s/toyosato_2372_3716/b30cccff" target="_blank" rel="noopener" data-cta="contact-aside">30分の無料相談を予約する <span aria-hidden="true">→</span></a>
         </div>
       </aside>
       <form id="contactForm" class="contact-form">
         <h2>お問い合わせフォーム</h2>
-        <p>通常2営業日以内にご返信いたします。</p>
+        <p>* は必須項目です。</p>
+        <label>ご相談の内容 <span>*</span><select name="type" id="contactType" required>
+          <option value="">選択してください</option>
+          <option value="制作の依頼（WEB・映像・デザイン）" data-key="production">制作の依頼（WEB・映像・デザイン）</option>
+          <option value="イベントの企画・運営" data-key="event">イベントの企画・運営</option>
+          <option value="企画・プロジェクトの相談（月額伴走を含む）" data-key="project">企画・プロジェクトの相談（月額伴走を含む）</option>
+          <option value="研修・滞在プログラム" data-key="training">研修・滞在プログラム</option>
+          <option value="取材・協業・その他" data-key="other">取材・協業・その他</option>
+        </select></label>
         <label>会社名・団体名 <span>*</span><input name="company" type="text" required placeholder="株式会社○○"></label>
         <label>お名前 <span>*</span><input name="name" type="text" required placeholder="山田 太郎"></label>
         <label>メールアドレス <span>*</span><input name="email" type="email" required placeholder="your@company.co.jp"></label>
         <label>電話番号<input name="tel" type="tel" placeholder="090-0000-0000"></label>
-        <label>お問い合わせ種別 <span>*</span><select name="type" required><option value="">選択してください</option><option>企業研修・合宿プログラム</option><option>クリエイター滞在プログラム</option><option>制作・イベントプロデュース</option><option>Webリニューアル</option><option>その他のご相談・取材・提携</option></select></label>
-        <label>ご相談内容・背景 <span>*</span><textarea name="message" required rows="7" placeholder="例：新卒研修をコザで実施したい。まだ企画段階ですが、どんなことができるか相談したいです。"></textarea></label>
+        <div class="form-row">
+          <label>希望の時期<select name="timing">
+            <option value="">選択してください</option>
+            <option>1ヶ月以内</option>
+            <option>2〜3ヶ月以内</option>
+            <option>半年以内</option>
+            <option>未定・相談したい</option>
+          </select></label>
+          <label>ご予算感<select name="budget">
+            <option value="">選択してください</option>
+            <option>〜30万円</option>
+            <option>30〜100万円</option>
+            <option>100〜300万円</option>
+            <option>300万円以上</option>
+            <option>月額での伴走を検討</option>
+            <option>未定・相談したい</option>
+          </select></label>
+        </div>
+        <label>ご相談内容・背景 <span>*</span><textarea name="message" required rows="7" placeholder="例：来年のイベントのキービジュアルとWebサイトをまとめてお願いしたい。開催は7月で、まだ企画段階です。"></textarea></label>
         <p class="privacy-note">送信いただいた個人情報は、お問い合わせへの対応のみに使用し、第三者への提供は行いません。</p>
         <button class="button" type="submit">送信する →</button>
         <div id="formThanks" class="form-thanks" hidden><strong>お問い合わせありがとうございます。</strong><br>内容を確認の上、通常2営業日以内にご返信いたします。</div>
@@ -69,7 +99,7 @@
   <footer class="footer">
     <div>
       <strong>CIGNALS</strong><br>
-      誰もが自分らしく創造的でいられる社会を実現する。
+      誰もが自分らしく、創造的でいられる社会へ。
     </div>
     <div>
       Cignals合同会社<br>
